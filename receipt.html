@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            background-color: #ddd;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="/admindash">HOME</a>
+    <h1>OFFICIAL RECEIPT</h1>
+    <h2>Date: {{ resibo[5] }}</h2>
+
+    <p>Received from: {{ resibo[3] }}, {{ resibo[1] }} {{ resibo[2] }}</p>
+    <p>Amount: {{ resibo[4] }}</p>
+
+    <button onclick="printReceipt()">Print</button>
+
+    <script>
+        function printReceipt() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
